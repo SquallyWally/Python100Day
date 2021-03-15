@@ -14,21 +14,22 @@ menu = Menu()
 geldMachine = GeldMachine()
 
 while True:
-
-    optie = input("What would you like? ( espresso/latte/cappuccino): ")
+    optie = menu.get_elements()
+    keuze = input(f"What would you like? ( {optie}): ")
 
     # Print Report
-    if optie == "r":
+    if keuze == "r":
         koffieMaker.report()
-    elif optie == "off":
+        geldMachine.report()
+    elif keuze == "off":
         break
     else:
         # Check Resources
-        drank = menu.find_drank(optie)
+        drank = menu.find_drank(keuze)
         if koffieMaker.genoeg_recources(drank):
 
             # Process Coins
-            prijs = menu.find_price(optie)
+            prijs = menu.find_price(keuze)
             # check Transaction if succesfull
             print("kek")
             if geldMachine.betaling(prijs):
