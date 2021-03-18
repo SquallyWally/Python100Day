@@ -4,7 +4,7 @@ import random
 is_race_on = False
 kleuren = ["red", "orange", "yellow", "green", "blue", "purple"]
 screen = Screen()
-screen.setup(width=500, height=400)
+screen.setup(width=1000, height=800)
 user_bet = screen.textinput(title="Make your bet donkey", prompt="Pick a turtle color: ")
 print(user_bet)
 
@@ -15,7 +15,7 @@ for turtle_index in range(0, 6):
     new_turtuga = Turtle(shape="turtle")
     new_turtuga.color(kleuren[turtle_index])
     new_turtuga.penup()
-    new_turtuga.goto(x=-230, y=y_pos[turtle_index])
+    new_turtuga.goto(x=-460, y=y_pos[turtle_index])
     turtle_list.append(new_turtuga)
 
 if user_bet:
@@ -23,7 +23,7 @@ if user_bet:
 
 while is_race_on:
     for element in turtle_list:
-        if element.xcor() > 230:
+        if element.xcor() > 460:
             is_race_on = False
             gewonnen_kleur = element.pencolor()
             if gewonnen_kleur == user_bet:
