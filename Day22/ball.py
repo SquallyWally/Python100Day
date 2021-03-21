@@ -30,7 +30,7 @@ class Ball(Turtle):
     def bounce_y(self):
         # trajectory will reverse
         self.y_move *= -1
-        #self.move_speed *= 0.9 , anders gaat die stotteren
+        # self.move_speed *= 0.9 , anders gaat die stotteren
 
     def bounce_x(self):
         # trajectory will reverse
@@ -41,3 +41,7 @@ class Ball(Turtle):
         self.goto(0, 0)
         self.move_speed = 0.1
         self.bounce_x()
+
+    def hit(self):
+        self.bounce_x()
+        self.bounce_y()
