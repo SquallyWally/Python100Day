@@ -52,6 +52,34 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/Day26/ChallengeDonkey.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Day26/Challenge_3/OtherDonkeyChallenge.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Day26/Dict_Comprehension _shit/NextGarbageChallenge.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Day26/NatoAlphabet.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
