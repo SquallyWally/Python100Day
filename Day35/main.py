@@ -7,7 +7,7 @@ from twilio.rest import Client
 proxy_client = TwilioHttpClient(proxy={'http': os.environ['http_proxy'], 'https': os.environ['https_proxy']})
 account_sid = 'AC20ee3ef84c3fb17b32ec6eba113d40b8'
 auth_token = '8f8ede6480d1d1f49824f9b81c0f1f58'
-api_key = "9680c16f19b7f57d60a6261b3f053bb3"
+api_key = SECRET
 OMW_Endpoint = "https://api.openweathermap.org/data/2.5/onecall"
 
 link = "https://jsonviewer.stack.hu/"
