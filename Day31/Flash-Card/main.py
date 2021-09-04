@@ -1,6 +1,7 @@
-from tkinter import *
-import pandas
 import random
+from tkinter import *
+
+import pandas
 
 to_learn = {}
 current_card = {}
@@ -8,7 +9,7 @@ current_card = {}
 try:
     words = pandas.read_csv("data/words_to_learn.csv")
 except FileNotFoundError:
-    original_data = pandas.read_csv("data/french_words.csv")
+    original_data = pandas.read_csv("data/italian_words.csv")
     to_learn = original_data.to_dict(orient="records")
 else:
     to_learn = words.to_dict(orient="records")
@@ -18,15 +19,15 @@ def next_card():
     global current_card, flip_timer
     window.after_cancel(flip_timer)
     current_card = random.choice(to_learn)
-    canvas.itemconfig(card_title, text="French", fill="black")
-    canvas.itemconfig(card_word, text=current_card["French"], fill="black")
+    canvas.itemconfig(card_title, text="Italiaans", fill="black")
+    canvas.itemconfig(card_word, text=current_card["Italiaans"], fill="black")
     canvas.itemconfig(card_background, image=front_card)  # reset the card back
     flip_timer = window.after(3000, func=flip_card)
 
 
 def flip_card():
-    canvas.itemconfig(card_title, text="English", fill="white")
-    canvas.itemconfig(card_word, text=current_card["English"], fill="white")
+    canvas.itemconfig(card_title, text="Nederlands", fill="white")
+    canvas.itemconfig(card_word, text=current_card["Nederlands"], fill="white")
     canvas.itemconfig(card_background, image=back_card)
 
 

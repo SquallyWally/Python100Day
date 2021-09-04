@@ -1,7 +1,7 @@
 import pandas
 
 # TODO 1. Create a dictionary in this format:
-{"A": "Alfa", "B": "Bravo"}
+var = {"A": "Alfa", "B": "Bravo"}
 nato = pandas.read_csv("nato_phonetic_alphabet.csv")
 nato_new_dict = {row.letter: row.code for (index, row) in nato.iterrows()}
 # print(nato_new_dict)
